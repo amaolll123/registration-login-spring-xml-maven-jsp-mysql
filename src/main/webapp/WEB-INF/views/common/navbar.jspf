@@ -1,0 +1,15 @@
+<nav role="navigation" class="navbar navbar-inverse">
+	<div class="">
+		<a href="/account/welcome" class="navbar-brand">To-Do Management</a>
+	</div>
+	<div class="navbar-collapse">
+		<ul class="nav navbar-nav ">
+			<li ><a href="/account/welcome">Home</a></li>
+			<li><a href="/account/list-todos">Todos</a></li>
+
+		</ul>
+		<ul class="nav navbar-nav navbar-right">			
+			<li><a href="/account/welcome">Welcome</a>
+		</ul>
+	</div>
+</nav>

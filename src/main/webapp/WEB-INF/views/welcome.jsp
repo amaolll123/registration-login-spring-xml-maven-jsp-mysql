@@ -1,6 +1,8 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
+
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 
 <!DOCTYPE html>
@@ -32,8 +34,14 @@
         </form>
 
         <h2>Welcome ${pageContext.request.userPrincipal.name} | <a onclick="document.forms['logoutForm'].submit()">Logout</a></h2>
+		<sec:authorize access="hasRole('ROLE_ADMIN')">
+				Greeting Administrator!
+				Do you want to <a href="/account/accmng">Manage the Accounts</a>?
+		</sec:authorize>
+        
 
     </c:if>
+    
 
 </div>
 <!-- /container -->
